@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=libretro-bsnes-git
-pkgver=r543.a4800add
+pkgver=r566.feb8c10c
 pkgrel=1
 pkgdesc='Super Nintendo Entertainment System cores'
 arch=('x86_64')
@@ -40,7 +40,7 @@ package() {
 
   install -dm 755 "${pkgdir}"/usr/{lib/libretro,share/libretro/info}
   for p in accuracy balanced performance; do
-    install -m 644 out/bsnes_${p}_libretro.so "${pkgdir}"/usr/lib/libretro/
+    install -m 644 out/bsnes2014_${p}_libretro.so "${pkgdir}"/usr/lib/libretro/
   done
 }
 
